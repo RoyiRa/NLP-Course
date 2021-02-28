@@ -1,0 +1,200 @@
+IN form=In is_first=True is_last=False nw=an nnw=Oct.
+DT form=an is_first=False is_last=False pt=IN pw=In nw=Oct. nnw=19
+NNP form=Oct. suff=ct. pref=Oct is_first=False is_last=False pt=DT pptpt=INDT pw=an ppw=In nw=19 nnw=review
+CD form=19 is_first=False is_last=False pt=NNP pptpt=DTNNP pw=Oct. ppw=an nw=review nnw=of
+NN form=review suff=iew pref=rev is_first=False is_last=False pt=CD pptpt=NNPCD pw=19 ppw=Oct. nw=of nnw=``
+IN form=of is_first=False is_last=False pt=NN pptpt=CDNN pw=review ppw=19 nw=`` nnw=The
+`` form=`` is_first=False is_last=False pt=IN pptpt=NNIN pw=of ppw=review nw=The nnw=Misanthrope
+DT form=The suff=The pref=The is_first=False is_last=False pt=`` pptpt=IN`` pw=`` ppw=of nw=Misanthrope nnw=''
+NN form=Misanthrope suff=ope pref=Mis is_first=False is_last=False pt=DT pptpt=``DT pw=The ppw=`` nw='' nnw=at
+'' form='' is_first=False is_last=False pt=NN pptpt=DTNN pw=Misanthrope ppw=The nw=at nnw=Chicago
+IN form=at is_first=False is_last=False pt='' pptpt=NN'' pw='' ppw=Misanthrope nw=Chicago nnw='s
+NNP form=Chicago suff=ago pref=Chi is_first=False is_last=False pt=IN pptpt=''IN pw=at ppw='' nw='s nnw=Goodman
+POS form='s is_first=False is_last=False pt=NNP pptpt=INNNP pw=Chicago ppw=at nw=Goodman nnw=Theatre
+NNP form=Goodman suff=man pref=Goo is_first=False is_last=False pt=POS pptpt=NNPPOS pw='s ppw=Chicago nw=Theatre nnw=(
+NNP form=Theatre suff=tre pref=The is_first=False is_last=False pt=NNP pptpt=POSNNP pw=Goodman ppw='s nw=( nnw=``
+( form=( is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Theatre ppw=Goodman nw=`` nnw=Revitalized
+`` form=`` is_first=False is_last=False pt=( pptpt=NNP( pw=( ppw=Theatre nw=Revitalized nnw=Classics
+VBN form=Revitalized suff=zed pref=Rev is_first=False is_last=False pt=`` pptpt=(`` pw=`` ppw=( nw=Classics nnw=Take
+NNS form=Classics suff=ics pref=Cla is_first=False is_last=False pt=VBN pptpt=``VBN pw=Revitalized ppw=`` nw=Take nnw=the
+VBP form=Take suff=ake pref=Tak is_first=False is_last=False pt=NNS pptpt=VBNNNS pw=Classics ppw=Revitalized nw=the nnw=Stage
+DT form=the suff=the pref=the is_first=False is_last=False pt=VBP pptpt=NNSVBP pw=Take ppw=Classics nw=Stage nnw=in
+NN form=Stage suff=age pref=Sta is_first=False is_last=False pt=DT pptpt=VBPDT pw=the ppw=Take nw=in nnw=Windy
+IN form=in is_first=False is_last=False pt=NN pptpt=DTNN pw=Stage ppw=the nw=Windy nnw=City
+NNP form=Windy suff=ndy pref=Win is_first=False is_last=False pt=IN pptpt=NNIN pw=in ppw=Stage nw=City nnw=,
+NNP form=City suff=ity pref=Cit is_first=False is_last=False pt=NNP pptpt=INNNP pw=Windy ppw=in nw=, nnw=''
+, form=, is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=City ppw=Windy nw='' nnw=Leisure
+'' form='' is_first=False is_last=False pt=, pptpt=NNP, pw=, ppw=City nw=Leisure nnw=&
+NN form=Leisure suff=ure pref=Lei is_first=False is_last=False pt='' pptpt=,'' pw='' ppw=, nw=& nnw=Arts
+CC form=& is_first=False is_last=False pt=NN pptpt=''NN pw=Leisure ppw='' nw=Arts nnw=)
+NNS form=Arts suff=rts pref=Art is_first=False is_last=False pt=CC pptpt=NNCC pw=& ppw=Leisure nw=) nnw=,
+) form=) is_first=False is_last=False pt=NNS pptpt=CCNNS pw=Arts ppw=& nw=, nnw=the
+, form=, is_first=False is_last=False pt=) pptpt=NNS) pw=) ppw=Arts nw=the nnw=role
+DT form=the suff=the pref=the is_first=False is_last=False pt=, pptpt=), pw=, ppw=) nw=role nnw=of
+NN form=role suff=ole pref=rol is_first=False is_last=False pt=DT pptpt=,DT pw=the ppw=, nw=of nnw=Celimene
+IN form=of is_first=False is_last=False pt=NN pptpt=DTNN pw=role ppw=the nw=Celimene nnw=,
+NNP form=Celimene suff=ene pref=Cel is_first=False is_last=False pt=IN pptpt=NNIN pw=of ppw=role nw=, nnw=played
+, form=, is_first=False is_last=False pt=NNP pptpt=INNNP pw=Celimene ppw=of nw=played nnw=by
+VBN form=played suff=yed pref=pla is_first=False is_last=False pt=, pptpt=NNP, pw=, ppw=Celimene nw=by nnw=Kim
+IN form=by is_first=False is_last=False pt=VBN pptpt=,VBN pw=played ppw=, nw=Kim nnw=Cattrall
+NNP form=Kim suff=Kim pref=Kim is_first=False is_last=False pt=IN pptpt=VBNIN pw=by ppw=played nw=Cattrall nnw=,
+NNP form=Cattrall suff=all pref=Cat is_first=False is_last=False pt=NNP pptpt=INNNP pw=Kim ppw=by nw=, nnw=was
+, form=, is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Cattrall ppw=Kim nw=was nnw=mistakenly
+VBD form=was suff=was pref=was is_first=False is_last=False pt=, pptpt=NNP, pw=, ppw=Cattrall nw=mistakenly nnw=attributed
+RB form=mistakenly suff=nly pref=mis is_first=False is_last=False pt=VBD pptpt=,VBD pw=was ppw=, nw=attributed nnw=to
+VBN form=attributed suff=ted pref=att is_first=False is_last=False pt=RB pptpt=VBDRB pw=mistakenly ppw=was nw=to nnw=Christina
+IN form=to is_first=False is_last=False pt=VBN pptpt=RBVBN pw=attributed ppw=mistakenly nw=Christina nnw=Haag
+NNP form=Christina suff=ina pref=Chr is_first=False is_last=False pt=IN pptpt=VBNIN pw=to ppw=attributed nw=Haag nnw=.
+NNP form=Haag suff=aag pref=Haa is_first=False is_last=False pt=NNP pptpt=INNNP pw=Christina ppw=to nw=.
+. form=. is_first=False is_last=True pt=NNP pptpt=NNPNNP pw=Haag ppw=Christina
+NNP form=Ms. suff=Ms. pref=Ms. is_first=True is_last=False nw=Haag nnw=plays
+NNP form=Haag suff=aag pref=Haa is_first=False is_last=False pt=NNP pw=Ms. nw=plays nnw=Elianti
+VBZ form=plays suff=ays pref=pla is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Haag ppw=Ms. nw=Elianti nnw=.
+NNP form=Elianti suff=nti pref=Eli is_first=False is_last=False pt=VBZ pptpt=NNPVBZ pw=plays ppw=Haag nw=.
+. form=. is_first=False is_last=True pt=NNP pptpt=VBZNNP pw=Elianti ppw=plays
+NNP form=Rolls-Royce suff=yce pref=Rol is_first=True is_last=False nw=Motor nnw=Cars
+NNP form=Motor suff=tor pref=Mot is_first=False is_last=False pt=NNP pw=Rolls-Royce nw=Cars nnw=Inc.
+NNPS form=Cars suff=ars pref=Car is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Motor ppw=Rolls-Royce nw=Inc. nnw=said
+NNP form=Inc. suff=nc. pref=Inc is_first=False is_last=False pt=NNPS pptpt=NNPNNPS pw=Cars ppw=Motor nw=said nnw=it
+VBD form=said suff=aid pref=sai is_first=False is_last=False pt=NNP pptpt=NNPSNNP pw=Inc. ppw=Cars nw=it nnw=expects
+PRP form=it is_first=False is_last=False pt=VBD pptpt=NNPVBD pw=said ppw=Inc. nw=expects nnw=its
+VBZ form=expects suff=cts pref=exp is_first=False is_last=False pt=PRP pptpt=VBDPRP pw=it ppw=said nw=its nnw=U.S.
+PRP$ form=its suff=its pref=its is_first=False is_last=False pt=VBZ pptpt=PRPVBZ pw=expects ppw=it nw=U.S. nnw=sales
+NNP form=U.S. suff=.S. pref=U.S is_first=False is_last=False pt=PRP$ pptpt=VBZPRP$ pw=its ppw=expects nw=sales nnw=to
+NNS form=sales suff=les pref=sal is_first=False is_last=False pt=NNP pptpt=PRP$NNP pw=U.S. ppw=its nw=to nnw=remain
+TO form=to is_first=False is_last=False pt=NNS pptpt=NNPNNS pw=sales ppw=U.S. nw=remain nnw=steady
+VB form=remain suff=ain pref=rem is_first=False is_last=False pt=TO pptpt=NNSTO pw=to ppw=sales nw=steady nnw=at
+JJ form=steady suff=ady pref=ste is_first=False is_last=False pt=VB pptpt=TOVB pw=remain ppw=to nw=at nnw=about
+IN form=at is_first=False is_last=False pt=JJ pptpt=VBJJ pw=steady ppw=remain nw=about nnw=1,200
+IN form=about suff=out pref=abo is_first=False is_last=False pt=IN pptpt=JJIN pw=at ppw=steady nw=1,200 nnw=cars
+CD form=1,200 suff=200 pref=1,2 is_first=False is_last=False pt=IN pptpt=ININ pw=about ppw=at nw=cars nnw=in
+NNS form=cars suff=ars pref=car is_first=False is_last=False pt=CD pptpt=INCD pw=1,200 ppw=about nw=in nnw=1990
+IN form=in is_first=False is_last=False pt=NNS pptpt=CDNNS pw=cars ppw=1,200 nw=1990 nnw=.
+CD form=1990 suff=990 pref=199 is_first=False is_last=False pt=IN pptpt=NNSIN pw=in ppw=cars nw=.
+. form=. is_first=False is_last=True pt=CD pptpt=INCD pw=1990 ppw=in
+DT form=The suff=The pref=The is_first=True is_last=False nw=luxury nnw=auto
+NN form=luxury suff=ury pref=lux is_first=False is_last=False pt=DT pw=The nw=auto nnw=maker
+NN form=auto suff=uto pref=aut is_first=False is_last=False pt=NN pptpt=DTNN pw=luxury ppw=The nw=maker nnw=last
+NN form=maker suff=ker pref=mak is_first=False is_last=False pt=NN pptpt=NNNN pw=auto ppw=luxury nw=last nnw=year
+JJ form=last suff=ast pref=las is_first=False is_last=False pt=NN pptpt=NNNN pw=maker ppw=auto nw=year nnw=sold
+NN form=year suff=ear pref=yea is_first=False is_last=False pt=JJ pptpt=NNJJ pw=last ppw=maker nw=sold nnw=1,214
+VBD form=sold suff=old pref=sol is_first=False is_last=False pt=NN pptpt=JJNN pw=year ppw=last nw=1,214 nnw=cars
+CD form=1,214 suff=214 pref=1,2 is_first=False is_last=False pt=VBD pptpt=NNVBD pw=sold ppw=year nw=cars nnw=in
+NNS form=cars suff=ars pref=car is_first=False is_last=False pt=CD pptpt=VBDCD pw=1,214 ppw=sold nw=in nnw=the
+IN form=in is_first=False is_last=False pt=NNS pptpt=CDNNS pw=cars ppw=1,214 nw=the nnw=U.S.
+DT form=the suff=the pref=the is_first=False is_last=False pt=IN pptpt=NNSIN pw=in ppw=cars nw=U.S.
+NNP form=U.S. suff=.S. pref=U.S is_first=False is_last=True pt=DT pptpt=INDT pw=the ppw=in
+NNP form=Howard suff=ard pref=How is_first=True is_last=False nw=Mosher nnw=,
+NNP form=Mosher suff=her pref=Mos is_first=False is_last=False pt=NNP pw=Howard nw=, nnw=president
+, form=, is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Mosher ppw=Howard nw=president nnw=and
+NN form=president suff=ent pref=pre is_first=False is_last=False pt=, pptpt=NNP, pw=, ppw=Mosher nw=and nnw=chief
+CC form=and suff=and pref=and is_first=False is_last=False pt=NN pptpt=,NN pw=president ppw=, nw=chief nnw=executive
+JJ form=chief suff=ief pref=chi is_first=False is_last=False pt=CC pptpt=NNCC pw=and ppw=president nw=executive nnw=officer
+NN form=executive suff=ive pref=exe is_first=False is_last=False pt=JJ pptpt=CCJJ pw=chief ppw=and nw=officer nnw=,
+NN form=officer suff=cer pref=off is_first=False is_last=False pt=NN pptpt=JJNN pw=executive ppw=chief nw=, nnw=said
+, form=, is_first=False is_last=False pt=NN pptpt=NNNN pw=officer ppw=executive nw=said nnw=he
+VBD form=said suff=aid pref=sai is_first=False is_last=False pt=, pptpt=NN, pw=, ppw=officer nw=he nnw=anticipates
+PRP form=he is_first=False is_last=False pt=VBD pptpt=,VBD pw=said ppw=, nw=anticipates nnw=growth
+VBZ form=anticipates suff=tes pref=ant is_first=False is_last=False pt=PRP pptpt=VBDPRP pw=he ppw=said nw=growth nnw=for
+NN form=growth suff=wth pref=gro is_first=False is_last=False pt=VBZ pptpt=PRPVBZ pw=anticipates ppw=he nw=for nnw=the
+IN form=for suff=for pref=for is_first=False is_last=False pt=NN pptpt=VBZNN pw=growth ppw=anticipates nw=the nnw=luxury
+NNS form=airplanes suff=nes pref=air is_first=False is_last=False pt=DT pptpt=VBDT pw=the ppw=fly nw=.
+. form=. is_first=False is_last=True pt=NNS pptpt=DTNNS pw=airplanes ppw=the
+IN form=If is_first=True is_last=False nw=they nnw=were
+PRP form=they suff=hey pref=the is_first=False is_last=False pt=IN pw=If nw=were nnw=to
+VBD form=were suff=ere pref=wer is_first=False is_last=False pt=PRP pptpt=INPRP pw=they ppw=If nw=to nnw=insist
+TO form=to is_first=False is_last=False pt=VBD pptpt=PRPVBD pw=were ppw=they nw=insist nnw=on
+VB form=insist suff=ist pref=ins is_first=False is_last=False pt=TO pptpt=VBDTO pw=to ppw=were nw=on nnw=a
+IN form=on is_first=False is_last=False pt=VB pptpt=TOVB pw=insist ppw=to nw=a nnw=low
+DT form=a is_first=False is_last=False pt=IN pptpt=VBIN pw=on ppw=insist nw=low nnw=bid
+JJ form=low suff=low pref=low is_first=False is_last=False pt=DT pptpt=INDT pw=a ppw=on nw=bid nnw=of
+NN form=bid suff=bid pref=bid is_first=False is_last=False pt=JJ pptpt=DTJJ pw=low ppw=a nw=of nnw=,
+IN form=of is_first=False is_last=False pt=NN pptpt=JJNN pw=bid ppw=low nw=, nnw=say
+, form=, is_first=False is_last=False pt=IN pptpt=NNIN pw=of ppw=bid nw=say nnw=$
+VB form=say suff=say pref=say is_first=False is_last=False pt=, pptpt=IN, pw=, ppw=of nw=$ nnw=200
+$ form=$ is_first=False is_last=False pt=VB pptpt=,VB pw=say ppw=, nw=200 nnw=a
+CD form=200 suff=200 pref=200 is_first=False is_last=False pt=$ pptpt=VB$ pw=$ ppw=say nw=a nnw=share
+DT form=a is_first=False is_last=False pt=CD pptpt=$CD pw=200 ppw=$ nw=share nnw=,
+NN form=share suff=are pref=sha is_first=False is_last=False pt=DT pptpt=CDDT pw=a ppw=200 nw=, nnw=the
+, form=, is_first=False is_last=False pt=NN pptpt=DTNN pw=share ppw=a nw=the nnw=board
+DT form=the suff=the pref=the is_first=False is_last=False pt=, pptpt=NN, pw=, ppw=share nw=board nnw=might
+NN form=board suff=ard pref=boa is_first=False is_last=False pt=DT pptpt=,DT pw=the ppw=, nw=might nnw=n't
+MD form=might suff=ght pref=mig is_first=False is_last=False pt=NN pptpt=DTNN pw=board ppw=the nw=n't nnw=be
+RB form=n't suff=n't pref=n't is_first=False is_last=False pt=MD pptpt=NNMD pw=might ppw=board nw=be nnw=able
+VB form=be is_first=False is_last=False pt=RB pptpt=MDRB pw=n't ppw=might nw=able nnw=to
+JJ form=able suff=ble pref=abl is_first=False is_last=False pt=VB pptpt=RBVB pw=be ppw=n't nw=to nnw=obtain
+TO form=to is_first=False is_last=False pt=JJ pptpt=VBJJ pw=able ppw=be nw=obtain nnw=a
+VB form=obtain suff=ain pref=obt is_first=False is_last=False pt=TO pptpt=JJTO pw=to ppw=able nw=a nnw=higher
+DT form=a is_first=False is_last=False pt=VB pptpt=TOVB pw=obtain ppw=to nw=higher nnw=offer
+JJR form=higher suff=her pref=hig is_first=False is_last=False pt=DT pptpt=VBDT pw=a ppw=obtain nw=offer nnw=from
+NN form=offer suff=fer pref=off is_first=False is_last=False pt=JJR pptpt=DTJJR pw=higher ppw=a nw=from nnw=other
+IN form=from suff=rom pref=fro is_first=False is_last=False pt=NN pptpt=JJRNN pw=offer ppw=higher nw=other nnw=bidders
+JJ form=other suff=her pref=oth is_first=False is_last=False pt=IN pptpt=NNIN pw=from ppw=offer nw=bidders nnw=because
+NNS form=bidders suff=ers pref=bid is_first=False is_last=False pt=JJ pptpt=INJJ pw=other ppw=from nw=because nnw=banks
+IN form=because suff=use pref=bec is_first=False is_last=False pt=NNS pptpt=JJNNS pw=bidders ppw=other nw=banks nnw=might
+NNS form=banks suff=nks pref=ban is_first=False is_last=False pt=IN pptpt=NNSIN pw=because ppw=bidders nw=might nnw=hesitate
+MD form=might suff=ght pref=mig is_first=False is_last=False pt=NNS pptpt=INNNS pw=banks ppw=because nw=hesitate nnw=to
+VB form=hesitate suff=ate pref=hes is_first=False is_last=False pt=MD pptpt=NNSMD pw=might ppw=banks nw=to nnw=finance
+TO form=to is_first=False is_last=False pt=VB pptpt=MDVB pw=hesitate ppw=might nw=finance nnw=a
+VB form=finance suff=nce pref=fin is_first=False is_last=False pt=TO pptpt=VBTO pw=to ppw=hesitate nw=a nnw=transaction
+DT form=a is_first=False is_last=False pt=VB pptpt=TOVB pw=finance ppw=to nw=transaction nnw=the
+NN form=transaction suff=ion pref=tra is_first=False is_last=False pt=DT pptpt=VBDT pw=a ppw=finance nw=the nnw=pilots
+DT form=the suff=the pref=the is_first=False is_last=False pt=NN pptpt=DTNN pw=transaction ppw=a nw=pilots nnw=oppose
+NNS form=pilots suff=ots pref=pil is_first=False is_last=False pt=DT pptpt=NNDT pw=the ppw=transaction nw=oppose nnw=.
+VBP form=oppose suff=ose pref=opp is_first=False is_last=False pt=NNS pptpt=DTNNS pw=pilots ppw=the nw=.
+. form=. is_first=False is_last=True pt=VBP pptpt=NNSVBP pw=oppose ppw=pilots
+RB form=Also suff=lso pref=Als is_first=True is_last=False nw=, nnw=because
+, form=, is_first=False is_last=False pt=RB pw=Also nw=because nnw=UAL
+IN form=because suff=use pref=bec is_first=False is_last=False pt=, pptpt=RB, pw=, ppw=Also nw=UAL nnw=Chairman
+NNP form=UAL suff=UAL pref=UAL is_first=False is_last=False pt=IN pptpt=,IN pw=because ppw=, nw=Chairman nnw=Stephen
+NNP form=Chairman suff=man pref=Cha is_first=False is_last=False pt=NNP pptpt=INNNP pw=UAL ppw=because nw=Stephen nnw=Wolf
+NNP form=Stephen suff=hen pref=Ste is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Chairman ppw=UAL nw=Wolf nnw=and
+NNP form=Wolf suff=olf pref=Wol is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Stephen ppw=Chairman nw=and nnw=other
+CC form=and suff=and pref=and is_first=False is_last=False pt=NNP pptpt=NNPNNP pw=Wolf ppw=Stephen nw=other nnw=UAL
+JJ form=other suff=her pref=oth is_first=False is_last=False pt=CC pptpt=NNPCC pw=and ppw=Wolf nw=UAL nnw=executives
+NNP form=UAL suff=UAL pref=UAL is_first=False is_last=False pt=JJ pptpt=CCJJ pw=other ppw=and nw=executives nnw=have
+NNS form=executives suff=ves pref=exe is_first=False is_last=False pt=NNP pptpt=JJNNP pw=UAL ppw=other nw=have nnw=joined
+VBP form=have suff=ave pref=hav is_first=False is_last=False pt=NNS pptpt=NNPNNS pw=executives ppw=UAL nw=joined nnw=the
+VBN form=joined suff=ned pref=joi is_first=False is_last=False pt=VBP pptpt=NNSVBP pw=have ppw=executives nw=the nnw=pilots
+DT form=the suff=the pref=the is_first=False is_last=False pt=VBN pptpt=VBPVBN pw=joined ppw=have nw=pilots nnw='
+NNS form=pilots suff=ots pref=pil is_first=False is_last=False pt=DT pptpt=VBNDT pw=the ppw=joined nw=' nnw=bid
+POS form=' is_first=False is_last=False pt=NNS pptpt=DTNNS pw=pilots ppw=the nw=bid nnw=,
+NN form=bid suff=bid pref=bid is_first=False is_last=False pt=POS pptpt=NNSPOS pw=' ppw=pilots nw=, nnw=the
+, form=, is_first=False is_last=False pt=NN pptpt=POSNN pw=bid ppw=' nw=the nnw=board
+DT form=the suff=the pref=the is_first=False is_last=False pt=, pptpt=NN, pw=, ppw=bid nw=board nnw=might
+NN form=board suff=ard pref=boa is_first=False is_last=False pt=DT pptpt=,DT pw=the ppw=, nw=might nnw=be
+MD form=might suff=ght pref=mig is_first=False is_last=False pt=NN pptpt=DTNN pw=board ppw=the nw=be nnw=forced
+VB form=be is_first=False is_last=False pt=MD pptpt=NNMD pw=might ppw=board nw=forced nnw=to
+VBN form=forced suff=ced pref=for is_first=False is_last=False pt=VB pptpt=MDVB pw=be ppw=might nw=to nnw=exclude
+TO form=to is_first=False is_last=False pt=VBN pptpt=VBVBN pw=forced ppw=be nw=exclude nnw=him
+VB form=exclude suff=ude pref=exc is_first=False is_last=False pt=TO pptpt=VBNTO pw=to ppw=forced nw=him nnw=from
+PRP form=him suff=him pref=him is_first=False is_last=False pt=VB pptpt=TOVB pw=exclude ppw=to nw=from nnw=its
+IN form=from suff=rom pref=fro is_first=False is_last=False pt=PRP pptpt=VBPRP pw=him ppw=exclude nw=its nnw=deliberations
+PRP$ form=its suff=its pref=its is_first=False is_last=False pt=IN pptpt=PRPIN pw=from ppw=him nw=deliberations nnw=in
+NNS form=deliberations suff=ons pref=del is_first=False is_last=False pt=PRP$ pptpt=INPRP$ pw=its ppw=from nw=in nnw=order
+IN form=in is_first=False is_last=False pt=NNS pptpt=PRP$NNS pw=deliberations ppw=its nw=order nnw=to
+NN form=order suff=der pref=ord is_first=False is_last=False pt=IN pptpt=NNSIN pw=in ppw=deliberations nw=to nnw=be
+TO form=to is_first=False is_last=False pt=NN pptpt=INNN pw=order ppw=in nw=be nnw=fair
+VB form=be is_first=False is_last=False pt=TO pptpt=NNTO pw=to ppw=order nw=fair nnw=to
+JJ form=fair suff=air pref=fai is_first=False is_last=False pt=VB pptpt=TOVB pw=be ppw=to nw=to nnw=other
+IN form=to is_first=False is_last=False pt=JJ pptpt=VBJJ pw=fair ppw=be nw=other nnw=bidders
+JJ form=other suff=her pref=oth is_first=False is_last=False pt=IN pptpt=JJIN pw=to ppw=fair nw=bidders nnw=.
+NNS form=bidders suff=ers pref=bid is_first=False is_last=False pt=JJ pptpt=INJJ pw=other ppw=to nw=.
+. form=. is_first=False is_last=True pt=NNS pptpt=JJNNS pw=bidders ppw=other
+DT form=That suff=hat pref=Tha is_first=True is_last=False nw=could nnw=cost
+MD form=could suff=uld pref=cou is_first=False is_last=False pt=DT pw=That nw=cost nnw=him
+VB form=cost suff=ost pref=cos is_first=False is_last=False pt=MD pptpt=DTMD pw=could ppw=That nw=him nnw=the
+PRP form=him suff=him pref=him is_first=False is_last=False pt=VB pptpt=MDVB pw=cost ppw=could nw=the nnw=chance
+DT form=the suff=the pref=the is_first=False is_last=False pt=PRP pptpt=VBPRP pw=him ppw=cost nw=chance nnw=to
+NN form=chance suff=nce pref=cha is_first=False is_last=False pt=DT pptpt=PRPDT pw=the ppw=him nw=to nnw=influence
+TO form=to is_first=False is_last=False pt=NN pptpt=DTNN pw=chance ppw=the nw=influence nnw=the
+VB form=influence suff=nce pref=inf is_first=False is_last=False pt=TO pptpt=NNTO pw=to ppw=chance nw=the nnw=outcome
+DT form=the suff=the pref=the is_first=False is_last=False pt=VB pptpt=TOVB pw=influence ppw=to nw=outcome nnw=and
+NN form=outcome suff=ome pref=out is_first=False is_last=False pt=DT pptpt=VBDT pw=the ppw=influence nw=and nnw=perhaps
+CC form=and suff=and pref=and is_first=False is_last=False pt=NN pptpt=DTNN pw=outcome ppw=the nw=perhaps nnw=join
+RB form=perhaps suff=aps pref=per is_first=False is_last=False pt=CC pptpt=NNCC pw=and ppw=outcome nw=join nnw=the
+VB form=join suff=oin pref=joi is_first=False is_last=False pt=RB pptpt=CCRB pw=perhaps ppw=and nw=the nnw=winning
+DT form=the suff=the pref=the is_first=False is_last=False pt=VB pptpt=RBVB pw=join ppw=perhaps nw=winning nnw=bidder
+VBG form=winning suff=ing pref=win is_first=False is_last=False pt=DT pptpt=VBDT pw=the ppw=join nw=bidder nnw=.
+NN form=bidder suff=der pref=bid is_first=False is_last=False pt=VBG pptpt=DTVBG pw=winning ppw=the nw=.
+. form=. is_first=False is_last=True pt=NN pptpt=VBGNN pw=bidder ppw=winning
