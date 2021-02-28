@@ -1,6 +1,14 @@
 # Relation Extration 
 
-This software extract Work_For relation within text.
+# BIU-NLP-Course
+An assignment from the Natural Language Processing course in BIU, taught by Prof. Yoav Goldberg, Prof. Ido Dagan and Prof. Reut Tsarfaty - if you can, I **HIGHLY** recommend signing up for the class.
+
+For our fourth assignment, we were tasked with implementing a Relationship Extraction model and writing a report:
+
+We focused on the 'Work_For' relationship. 
+For instance, the model receives as input: "Alice won Facebook's employee-of-the-month for the Relationship Extraction model she developed!" and outputs: (Work_For, Alice, Facebook); because Alice works at Facebook. 
+
+To successfully perform this task, we first used spaCy to extract text insights such as Named Entities, PoS, etc... Then, we created relevant representational vectors (we ignored sentences without PERSON and ORGANIZATION entities, since a Work_For relationship can only be between them), and trained a classifier to detect whether a sentence contains the relationship or not. Using Recall and Precision as our performance metrics, we sampled errors our model made, and fine-tuned it with rules to beat our previous results.
 
 
 ### Software dependencies:
