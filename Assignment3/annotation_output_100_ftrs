@@ -1,0 +1,43 @@
+car
+truck       + +    driver      + -    vehicle     + +    
+driver      + -    drive       + -    truck       + +    
+vehicle     + +    truck       + +    driver      + -    
+motor       + -    vehicle     + +    motorcycle  + -
+drive       + -    race        + -    locomotive  + -
+racing      + -    motor       + -    automobile  + +
+ford        + +    ford        + +    racing      + -
+formula     + -    racing      + -    aircraft    + -
+automobile  + +    automobile  + +    station     - -
+traffic     + -    formula     + -    auto        + +
+motorcycle  - -    auto        + +    horse       + -
+bus         + +    crash       + -    motor       + -
+race        + -    toyota      + +    stock       - -
+bicycle     + -    nascar      + -    traffic     + -
+aircraft    + -    wheel       + -    bicycle     + -
+auto        + +    engine      + -    bus         + +
+lap         + -    motorcycle  - -    boat        + -
+toyota      + +    ferrari     + +    item        - -
+stock       - -    bmw         + +    cyclist     - -
+toy         - -    chassis     - -    plane       + -
+
+piano
+violin      + +    violin      + +    violin      + +
+flute       + +    flute       + +    viola       + +
+cello       + +    sonata      + -    guitar      + +
+concerto    + -    cello       + +    cello       + +
+viola       + +    concerto    + -    bass        + +
+sonata      + -    percussion  + +    flute       + +
+op          + -    bass        + +    keyboard    + +
+guitar      + +    trumpet     + +    percussion  + +
+string      + -    instrument  + +    horn        - -
+trumpet     + +    op          + -    drum        + -
+bass        + +    viola       + +    saxophone   + -
+saxophone   + -    composition + -    trumpet     + +
+solo        - -    saxophone   + +    instrument  + +
+keyboard    + +    quartet     + -    vocal       + -
+instrument  + +    tenor       + -    orchestra   + -
+quartet     + -    horn        - -    organ       + +
+soloist     + -    trio        + -    choir       + -
+percussion  + +    guitar      + +    dance       + -
+composition + -    string      + -    solo        - -
+ensemble    + -    keyboard    + +    music       + -

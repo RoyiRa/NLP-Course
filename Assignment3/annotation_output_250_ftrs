@@ -1,0 +1,43 @@
+car
+truck       + +    driver      + -    vehicle     + +
+driver      + -    drive       + -    truck       + +
+vehicle     + +    truck       + +    driver      + -
+motor       + -    vehicle     + +    motorcycle  + -
+drive       + -    race        + -    locomotive  + -
+racing      + -    motor       + -    automobile  + +
+ford        + +    ford        + +    racing      + -
+formula     + -    racing      + -    aircraft    + -
+traffic     + -    formula     + -    horse       + -
+bus         + +    automobile  + +    station     - -
+automobile  + +    crash       + -    motor       + -
+motorcycle  + -    wheel       + -    stock       - -
+race        + -    engine      + -    traffic     + -
+aircraft    + -    motorcycle  + -    bicycle     + -
+bicycle     + -    lap         + -    bus         + +
+toy         - -    run         - -    boat        + -
+lap         + -    prix        - -    ford        + +
+stock       - -    passenger   + -    hall        - -
+passenger   + -    indianapolis - -    train       + -
+crash       + -    model       + -    plane       + -
+
+piano
+violin      + +    violin      + +    violin      + +
+op          + -    bass        + +    guitar      + +
+string      + -    op          + -    bass        + +
+guitar      + +    instrument  + +    keyboard    + +
+solo        - -    composition + -    horn        - -
+keyboard    + +    horn        - -    drum        + +
+bass        + +    trio        + -    instrument  + +
+instrument  + +    string      + -    vocal       + -
+composition + -    guitar      + +    orchestra   + -
+ensemble    + -    keyboard    + +    organ       + +
+orchestra   + -    orchestra   + -    choir       + -
+acoustic    + -    drum        + +    dance       + -
+horn        - -    ensemble    + -    solo        - -
+drum        + +    acoustic    + -    music       + -
+organ       + +    solo        - -    composition + -
+vocal       + -    instrumental + -    mathematics - -
+trio        + -    composer    + -    rock        - -
+sing        - -    vocal       + -    ballet      + -
+lesson      - -    jazz        + -    lesson      - -
+choir       + -    music       + -    jazz        + -
