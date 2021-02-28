@@ -1,0 +1,218 @@
+# c d
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But the  *program* should still work with grammars that don't
+#      follow this convention.  So how can the program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+3	ROOT	S .
+3	ROOT	S !
+1	ROOT	is it true that IIT-S ?     # mixing terminals and nonterminals is ok.
+1   ROOT    i wonder WH-S .
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#   S = sentence
+#   IIT-S = sentence that fits the prefix 'is it true' and ends with a question mark
+#   WH-S = an embedded question sentence
+#   WH-VERB1 = transitive-verb or transitive-verb-phrase that fits an embedded question setence
+#   SBAR = sentence introduced by subordinating conjunction
+#   IIT-SBAR = IIT-sentence introduced by subordinating conjunction
+#   RELCLAUSE = VP introduced by subordinating conjunction, helps us understand the NP1 that precedes it
+#   NP = noun phrase
+#   IIT-NP = NP that fits the prefix 'is it true' and ends with a question mark
+#   NP1 = det-noun phrase
+#   IIT-NP1 = NP1 that fits the prefix 'is it true' and ends with a question mark
+#   NP2 = pronouns and propernouns
+#   VP = verb phrase
+#   IIT-VP = VP that fits the prefix 'is it true' and ends with a question mark
+#   VP0 = intransitive-verb phrase
+#   IIT-VP0 = VP0 that fits the prefix 'is it true' and ends with a question mark
+#   VP1 = transitive-verb phrase
+#   IIT-VP1 = VP1 that fits the prefix 'is it true' and ends with a question mark
+#   PP = prepositional phrase
+#   IIT-PP = PP that fits the prefix 'is it true' and ends with a question mark
+#   Det = determiner (sometimes called "article")
+#   Prep = preposition
+#   Adj = adjective
+#   Rb = adverb
+#   Verb0 = intransitive verb
+#   Verb1 = transitive verb
+#   WH-VERB1 = transitive verb that fits an embedded question
+#   Vbg = VBG verb
+#   Cc = coordinating Conjunction
+#   Prp = personal pronoun
+#   Nnp = proper noun, singular
+#   Aux = auxiliary
+
+1   S   S Cc S
+3	S	NP VP
+3   S   NP Aux Adj                  # the president (NP) is (Aux) lazy (Adj)
+3   S   NP Aux NP                   # sally (NP) is (Aux) a sandwich (NP)
+1   S   NP1 RELCLAUSE
+
+1   IIT-S  IIT-S Cc IIT-S
+3	IIT-S  IIT-NP IIT-VP
+3   IIT-S  IIT-NP Aux Adj
+3   IIT-S  IIT-NP Aux IIT-NP
+1   IIT-S  IIT-NP1 RELCLAUSE VP   # is it true that the president that sighed is eating ?
+
+1 WH-S  what NP WH-VERB1                   # i wonder what sally ate
+1 WH-S  what NP WH-VERB1 Prep              # i wonder what sally ate with (a fork?)
+1 WH-S  what NP WH-VERB1 PP                # i wonder what sally thought under the tree
+1 WH-S  what NP WH-VERB1 that NP WH-VERB1  # i wonder what the president thought that sally ate
+1 WH-S  who Aux NP                         # i wonder who is a sandwich
+1 WH-S  who NP WH-VERB1 that Aux NP        # i wonder who the president wanted that is a sandwich
+1 WH-S  who Aux Adj                     # i wonder who is fine
+1 WH-S  who VP                          # i wonder who worked on the table
+1 WH-S  who NP VP with                  # i wonder who [the president sighed with] OR [wanted sally with]
+1 WH-S  where NP VP                     # i wonder where the president ate the sandwich
+1 WH-S  where NP is                     # i wonder where sally is
+
+3   NP  NP Cc NP                        # sally and/or sally
+8   NP  NP1                             # the president
+8   NP  NP2                             # sally/it
+
+3   IIT-NP  IIT-NP Cc IIT-NP
+8   IIT-NP  IIT-NP1
+8   IIT-NP  NP2
+
+8  NP1  Det Noun
+1  NP1  NP1 PP
+1  NP1  NP1 RELCLAUSE
+
+8  IIT-NP1 Det Noun
+1  IIT-NP1 IIT-NP1 IIT-PP
+1  IIT-NP1 IIT-NP1 RELCLAUSE IIT-VP
+
+3   NP2 Nnp
+1   NP2 Prp
+
+2   VP  VP0
+2   VP  VP1
+1   VP  Aux Vbg                     # is eating
+1   VP  Aux Vbg NP                  # is eating a sandwich
+1   VP  Aux Vbg NP2 PP              # is eating it on a desk
+
+2   IIT-VP  IIT-VP0
+2   IIT-VP  IIT-VP1
+1   IIT-VP  Aux Vbg
+1   IIT-VP  Aux Vbg IIT-NP
+1   IIT-VP  Aux Vbg NP2 IIT-PP      # is eating it on a desk
+
+2   VP0 Verb0                          # sighed
+1   VP0 VP0 PP                      # sighed (Verb0) on a desk (PP)
+
+2   IIT-VP0 Verb0
+1   IIT-VP0 IIT-VP0 IIT-PP
+
+10  VP1  Verb1 NP                      # kissed the president
+6   VP1  Verb1 NP2 PP                  # kissed Sally on a desk
+3   VP1  Verb1 Cc VP1                  # kissed (Verb1) and (Cc) wanted a sandwich (VP1)
+1   VP1  Verb1 SBAR                    # thought (Verb1) that sally is a pickle (SBAR)
+1   VP1  Verb1 NP SBAR                 # kissed (Verb1) the president (NP) that sally ate (SBAR)
+
+18  WH-VERB1   Verb1
+4   WH-VERB1   Aux Vbg
+3   WH-VERB1   WH-VERB1 Cc WH-VERB1
+
+10  IIT-VP1  Verb1 IIT-NP
+6   IIT-VP1  Verb1 NP2 PP
+3   IIT-VP1  Verb1 Cc IIT-VP1
+1   IIT-VP1  Verb1 IIT-SBAR
+1   IIT-VP1  Verb1 IIT-NP IIT-SBAR
+
+1	PP  Prep NP                     # on (Prep) the president (NP)
+
+1	IIT-PP  Prep IIT-NP
+
+2	Noun    Adj Noun                # lazy (Adj) pickle (Noun)
+
+1   Adj     Rb Adj                  # very
+1   Adj     Adj Cc Adj              # delicious and fine
+
+1 SBAR that S
+
+1 IIT-SBAR that S
+
+1 RELCLAUSE that VP
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of
+# terminals, like "chief of staff") is called a "preterminal."  Notice
+# that a preterminal is a special kind of nonterminal.
+
+1   Verb0   ate
+1   Verb0   sighed
+1   Verb0   worked
+
+1   Verb1   ate
+1   Verb1   understood
+1   Verb1   kissed
+1   Verb1   wanted
+1   Verb1   pickled
+1   Verb1   thought
+1   Verb1   perplexed
+
+1   Vbg eating
+
+1	Det	the
+1	Det	a
+1	Det	every
+
+1	Noun	president
+1	Noun	sandwich
+1	Noun	pickle
+1	Noun	chief of staff
+1	Noun	floor
+1   Noun    proposal
+1   Noun    desk
+1   Noun    rainbow
+1   Noun    united states
+1   Noun    man
+1   Noun    lady
+
+1   Nnp  sally                      # lower-cased to follow the terminal's convention
+
+1   Prp  it
+
+1   Adj perplexed
+1   Adj lazy
+1   Adj fine
+1   Adj sweet
+1   Adj smart
+1   Adj hungry
+1   Adj pickled
+1   Adj delicious
+1   Adj fine
+1   Adj dirty
+1   Adj artificial
+1   Adj new
+
+1   Rb very
+1   Rb so
+
+1	Prep    with
+1	Prep	on
+1	Prep	under
+1	Prep	in
+
+1   Cc  and
+1   Cc  or
+
+1   Aux     is

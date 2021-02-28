@@ -1,0 +1,5 @@
+(ROOT (S (S (NP (NP1 (Det every) (Noun man))) (VP (Aux is) (Vbg eating) (NP2 (Prp it)) (PP (Prep on) (NP (NP2 (Nnp sally)))))) (Cc or) (S (NP (NP1 (Det the) (Noun sandwich))) (Aux is) (NP (NP2 (Nnp sally))))) .)
+(ROOT (S (NP (NP2 (Nnp sally))) (Aux is) (Adj sweet)) !)
+(ROOT (S (NP (NP2 (Prp it))) (Aux is) (NP (NP2 (Nnp sally)))) !)
+(ROOT (S (S (NP (NP2 (Nnp sally))) (Aux is) (NP (NP2 (Nnp sally)))) (Cc and) (S (NP (NP2 (Nnp sally))) (VP (VP0 (Verb0 worked))))) .)
+(ROOT (S (NP (NP2 (Nnp sally))) (Aux is) (Adj dirty)) .)

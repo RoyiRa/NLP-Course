@@ -1,0 +1,258 @@
+# c d
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But the  *program* should still work with grammars that don't
+#      follow this convention.  So how can the program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+3	ROOT	S .
+3	ROOT	S !
+1	ROOT	is it true that IIT-S ?     # mixing terminals and nonterminals is ok.
+1   ROOT    i wonder WH-S .
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#   S = sentence
+#   IIT-S = sentence that fits the prefix 'is it true' and ends with a question mark
+#   WH-S = an embedded question sentence
+#   WH-VERB1 = transitive-verb or transitive-verb-phrase that fits an embedded question setence
+#   SBAR = sentence introduced by subordinating conjunction
+#   IIT-SBAR = IIT-sentence introduced by subordinating conjunction
+#   RELCLAUSE = VP introduced by subordinating conjunction, helps us understand the NP1 that precedes it
+#   NP = noun phrase
+#   A-NP = actor-noun phrase
+#   A-NP1 = actor-noun phrase that starts with a determiner and may be used before RELCLAUSE
+#   O-NP = object-noun phrase
+#   IIT-NP = NP that fits the prefix 'is it true' and ends with a question mark
+#   IIT-A-NP = A-NP that fits the prefix 'is it true' and ends with a question mark
+#   IIT-A-NP1 = A-NP1 that fits the prefix 'is it true' and ends with a question mark
+#   IIT-O-NP = O-NP that fits the prefix 'is it true' and ends with a question mark
+#   NP1 = det-noun phrase
+#   IIT-NP1 = NP1 that fits the prefix 'is it true' and ends with a question mark
+#   IIT-A-NP1 = A-NP1 that fits the prefix 'is it true' and ends with a question mark
+#   NP2 = pronouns and propernouns
+#   VP = verb phrase
+#   IIT-VP = VP that fits the prefix 'is it true' and ends with a question mark
+#   VP0 = intransitive-verb phrase
+#   IIT-VP0 = VP0 that fits the prefix 'is it true' and ends with a question mark
+#   VP1 = transitive-verb phrase
+#   IIT-VP1 = VP1 that fits the prefix 'is it true' and ends with a question mark
+#   PP = prepositional phrase
+#   IIT-PP = PP that fits the prefix 'is it true' and ends with a question mark
+#   Act = actor, a noun that can perform a verb
+#   Obj = object, a noun that cannot perform a verb
+#   Det = determiner (sometimes called "article")
+#   Prep = preposition
+#   Adj = adjective
+#   A-adj = adjective that fits actors
+#   O-adj = adjective that fits objects
+#   Rb = adverb
+#   Verb0 = intransitive verb
+#   Verb1 = transitive verb
+#   WH-VERB1 = transitive verb that fits an embedded question
+#   Vbg = VBG verb
+#   Cc = coordinating Conjunction
+#   Prp = personal pronoun
+#   Nnp = proper noun, singular
+#   Aux = auxiliary
+
+1   S   S Cc S
+3	S	A-NP VP
+3   S   A-NP Aux A-adj                  # the president (NP) is (Aux) lazy (Adj)
+3   S   O-NP Aux O-adj                  # the president (NP) is (Aux) lazy (Adj)
+3   S   NP Aux NP                       # sally (NP) is (Aux) a sandwich (NP)
+1   S   A-NP1 RELCLAUSE
+1   S   A-NP Cc A-NP are Vbg            # the president and the man are eating
+1   S   A-NP Cc A-NP are A-adj          # the president and the lady are sweet
+1   S   O-NP Cc O-NP are O-adj          # the sandwich and the desk are dirty
+
+1   IIT-S  IIT-S Cc IIT-S
+3	IIT-S  IIT-A-NP IIT-VP
+3   IIT-S  IIT-A-NP Aux A-adj
+3   IIT-S  IIT-O-NP Aux O-adj
+3   IIT-S  IIT-NP Aux IIT-NP
+1   IIT-S  IIT-A-NP1 RELCLAUSE VP              # is it true that the president that sighed is eating ?
+1   IIT-S  IIT-A-NP Cc IIT-A-NP are Vbg        # is it true that a man and sally are eating ?
+1   IIT-S  IIT-A-NP Cc IIT-A-NP are A-adj      # is it true that sally and every president are fine ?
+1   IIT-S  IIT-O-NP Cc IIT-O-NP are O-adj      # is it true that every sandwich and a floor are new ?
+
+1 WH-S  what A-NP WH-VERB1                   # i wonder what sally ate
+1 WH-S  what A-NP WH-VERB1 Prep              # i wonder what sally ate with (a fork?)
+1 WH-S  what A-NP WH-VERB1 PP                # i wonder what sally thought under the tree
+1 WH-S  what A-NP WH-VERB1 that NP WH-VERB1     # i wonder what the president thought that sally ate
+1 WH-S  who Aux NP                        # i wonder who is a sandwich
+1 WH-S  who A-NP WH-VERB1 that Aux NP        # i wonder who the president wanted that is a sandwich
+1 WH-S  who Aux A-adj                     # i wonder who is fine
+1 WH-S  who VP                            # i wonder who worked on the table
+1 WH-S  who A-NP VP with                  # i wonder who [the president sighed with] OR [wanted sally with]
+1 WH-S  where A-NP VP                     # i wonder where the president ate the sandwich
+1 WH-S  where NP is                       # i wonder where sally is
+
+1   NP  NP Cc NP                    # sally and/or sally
+8   NP  A-NP                        # the president / sally
+8   NP  O-NP                        # the desk
+
+1   A-NP A-NP Cc A-NP
+8   A-NP A-NP1
+8   A-NP NP2
+
+8   A-NP1 Det Act
+1   A-NP1 A-NP1 PP
+1   A-NP1 A-NP1 RELCLAUSE
+
+1   O-NP Det Obj
+1   O-NP O-NP PP
+
+3   IIT-NP  IIT-NP Cc IIT-NP
+8   IIT-NP  IIT-A-NP
+8   IIT-NP  IIT-O-NP
+
+1   IIT-A-NP IIT-A-NP Cc IIT-A-NP
+8   IIT-A-NP IIT-A-NP1
+8   IIT-A-NP NP2
+
+8  IIT-A-NP1 Det Act
+1  IIT-A-NP1 IIT-A-NP1 IIT-PP
+1  IIT-A-NP1 IIT-A-NP1 RELCLAUSE IIT-VP
+
+1   IIT-O-NP Det Obj
+1   IIT-O-NP IIT-O-NP IIT-PP
+
+3   NP2 Nnp
+1   NP2 Prp
+
+2   VP  VP0
+2   VP  VP1
+1   VP  Aux Vbg                  # is eating
+1   VP  Aux Vbg NP               # is eating a sandwich
+1   VP  Aux Vbg NP2 PP           # is eating it on a desk
+
+2   IIT-VP  IIT-VP0
+2   IIT-VP  IIT-VP1
+1   IIT-VP  Aux Vbg
+1   IIT-VP  Aux Vbg IIT-NP
+1   IIT-VP  Aux Vbg NP2 IIT-PP   # is eating it on a desk
+
+2   VP0 Verb0                       # sighed
+1   VP0 VP0 PP                   # sighed (Verb0) on a desk (PP)
+
+2   IIT-VP0 Verb0
+1   IIT-VP0 IIT-VP0 IIT-PP
+
+10  VP1  Verb1 NP                   # kissed the president
+6   VP1  Verb1 NP2 PP               # kissed Sally on a desk
+3   VP1  Verb1 Cc VP1               # kissed (Verb1) and (Cc) wanted a sandwich (VP1)
+1   VP1  Verb1 SBAR                 # thought (Verb1) that sally is a pickle (SBAR)
+1   VP1  Verb1 NP SBAR              # kissed (Verb1) the president (NP) that sally ate (SBAR)
+
+18  WH-VERB1   Verb1
+4   WH-VERB1   Aux Vbg
+3   WH-VERB1   WH-VERB1 Cc WH-VERB1
+
+10  IIT-VP1  Verb1 IIT-NP
+6   IIT-VP1  Verb1 NP2 PP
+3   IIT-VP1  Verb1 Cc IIT-VP1
+1   IIT-VP1  Verb1 IIT-SBAR
+1   IIT-VP1  Verb1 IIT-NP IIT-SBAR
+
+1	PP  Prep NP                 # on (Prep) the president (NP)
+
+1	IIT-PP  Prep IIT-NP
+
+2   Act     A-adj Act
+
+2   Obj     O-adj Obj
+
+1   A-adj     Rb A-adj
+1   A-adj     A-adj Cc A-adj
+
+1   O-adj     Rb O-adj
+1   O-adj     O-adj Cc O-adj
+
+1 SBAR that S
+
+1 IIT-SBAR that S
+
+1 RELCLAUSE that VP
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of
+# terminals, like "chief of staff") is called a "preterminal."  Notice
+# that a preterminal is a special kind of nonterminal.
+
+1   Verb0   ate
+1   Verb0   sighed
+1   Verb0   worked
+
+1   Verb1   ate
+1   Verb1   understood
+1   Verb1   kissed
+1   Verb1   wanted
+1   Verb1   pickled
+1   Verb1   thought
+1   Verb1   perplexed
+
+1   Vbg eating
+
+1	Det	the
+1	Det	a
+1	Det	every
+
+1   Act   president
+1   Act   man
+1   Act   lady
+1   Act   chief of staff
+1   Act   united states
+
+1   Obj  pickle
+1   Obj  sandwich
+1   Obj  floor
+1   Obj  proposal
+1   Obj  desk
+1   Obj  rainbow
+
+1   Nnp  sally                      # lower-cased to follow the terminal's convention
+
+1   Prp  it
+
+1   A-adj perplexed
+1   A-adj lazy
+1   A-adj fine
+1   A-adj sweet
+1   A-adj smart
+1   A-adj hungry
+
+1   O-adj pickled
+1   O-adj delicious
+1   O-adj fine
+1   O-adj dirty
+1   O-adj artificial
+1   O-adj new
+
+1   Rb very
+1   Rb so
+
+1	Prep    with
+1	Prep	on
+1	Prep	under
+1	Prep	in
+
+1   Cc  and
+1   Cc  or
+
+1   Aux     is

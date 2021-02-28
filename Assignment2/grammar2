@@ -1,0 +1,153 @@
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But the  *program* should still work with grammars that don't
+#      follow this convention.  So how can the program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+3	ROOT	S .
+3	ROOT	S !
+1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#   S = sentence
+#   SBAR = sentence introduced by subordinating conjunction
+#   NP = noun phrase
+#   NP1 = det-noun phrase
+#   NP2 = pronouns and propernouns
+#   VP = verb phrase
+#   VP0 = intransitive-verb phrase
+#   VP1 = transitive-verb phrase
+#   PP = prepositional phrase
+#   Det = determiner (sometimes called "article")
+#   Prep = preposition
+#   Adj = adjective
+#   Rb = Adverb
+#   Verb0 = intransitive verb
+#   Verb1 = transitive verb
+#   Vbg = VBG verb
+#   Cc = coordinating Conjunction
+#   Prp = personal pronoun
+#   Nnp = proper noun, singular
+#   Aux = auxiliary
+
+1   S   S Cc S                      # Sentence and/or sentence
+3	S	NP VP
+3   S   NP Aux Adj                  # the president (NP) is (Aux) lazy (Adj)
+3   S   NP Aux NP                   # sally (NP) is (Aux) a sandwich (NP)
+
+3   NP  NP Cc NP                    # sally and/or sally
+8   NP  NP1                         # the president
+8   NP  NP2                         # sally/it
+
+8   NP1 Det Noun
+1   NP1  NP1 PP
+
+3   NP2 Nnp
+1   NP2 Prp
+
+2   VP  VP0
+2   VP  VP1
+1   VP  Aux Vbg                  # is eating
+1   VP  Aux Vbg NP               # is eating a sandwich
+1   VP  Aux Vbg NP2 PP           # is eating it on a desk
+
+2   VP0     Verb0                # sighed
+2   VP0     VP0 PP               # sighed on a desk
+
+10  VP1     Verb1 NP             # kissed the president
+6   VP1     Verb1 NP2 PP         # kissed Sally on a desk
+3   VP1     Verb1 Cc VP1         # kissed (Verb1) and (Cc) wanted a sandwich (VP1)
+1   VP1     Verb1 SBAR           # thought (Verb1) that sally is a pickle (SBAR)
+1   VP1     Verb1 NP SBAR        # kissed (Verb1) the president (NP) that sally ate (SBAR)
+
+1	PP      Prep NP              # on (Prep) the president (NP)
+
+1	Noun    Adj Noun             # lazy (Adj) pickle (Noun)
+
+1   SBAR    that S
+
+1   Adj     Rb Adj               # very delicious
+1   Adj     Adj Cc Adj           # delicious and fine
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of
+# terminals, like "chief of staff") is called a "preterminal."  Notice
+# that a preterminal is a special kind of nonterminal.
+
+1   Verb0   ate
+1   Verb0   sighed
+1   Verb0   worked
+
+1   Verb1   ate
+1   Verb1   understood
+1   Verb1   kissed
+1   Verb1   wanted
+1   Verb1   pickled
+1   Verb1   thought
+1   Verb1   perplexed
+
+1   Vbg eating
+
+1	Det	the
+1	Det	a
+1	Det	every
+
+1	Noun	president
+1	Noun	sandwich
+1	Noun	pickle
+1	Noun	chief of staff
+1	Noun	floor
+1   Noun    proposal
+1   Noun    desk
+1   Noun    rainbow
+1   Noun    united states
+1   Noun    man
+1   Noun    lady
+
+1   Nnp  sally                      # lower-cased to follow the terminal's convention
+
+1   Prp  it
+
+1   Adj perplexed
+1   Adj lazy
+1   Adj fine
+1   Adj sweet
+1   Adj smart
+1   Adj hungry
+1   Adj pickled
+1   Adj delicious
+1   Adj fine
+1   Adj dirty
+1   Adj artificial
+1   Adj new
+
+1   Rb very
+1   Rb so
+
+1	Prep    with
+1	Prep	on
+1	Prep	under
+1	Prep	in
+1   Prep    of
+1   Prep    over
+
+1   Cc  and
+1   Cc  or
+
+1   Aux     is
