@@ -1,0 +1,8 @@
+1. word between Person and Organiztion is 'retired' and it connected to the Organization
+Example:
+sent4650	Lee 's surrender of the Army of Northern Virginia had virtually ended the war by that time , but Booth thought he could save the South by killing Lincoln , said Tidwell , a retired CIA officer .
+
+2. Location with 's -> our classifer think thats a Organization
+Examples:
+sent1147	Pittsburgh 's superintendent , Richard C. Wallace , who arrived in 1980 as an outsider to a city enmeshed in a bitter dispute over school desegregation , helped move the school system beyond that dispute and establish it as a national model of reform .
+sent1145	Rochester 's Peter McWalters , named in 1986 , signaled willingness to form a working partnership with teachers .
