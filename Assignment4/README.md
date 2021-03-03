@@ -3,6 +3,8 @@
 # BIU-NLP-Course
 An assignment from the Natural Language Processing course in BIU, taught by Prof. Yoav Goldberg, Prof. Ido Dagan and Prof. Reut Tsarfaty - if you can, I **HIGHLY** recommend signing up for the class.
 
+For the [technical report](https://github.com/RoyiRa/NLP-Course/blob/main/Assignment4/Report.pdf) 
+
 For our fourth assignment, we were tasked with implementing a Relationship Extraction model and writing a report:
 
 We focused on the 'Work_For' relationship. 
