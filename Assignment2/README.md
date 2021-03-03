@@ -1,6 +1,9 @@
 # BIU-NLP-Course
 An assignment from the Natural Language Processing course in BIU, taught by Prof. Yoav Goldberg, Prof. Ido Dagan and Prof. Reut Tsarfaty - if you can, I **HIGHLY** recommend signing up for the class.
 
+For the [technical report](https://github.com/RoyiRa/NLP-Course/blob/main/Assignment2/Report.pdf) 
+
+
 For our second assignment, we were tasked with writing language-rules and a report:
 
 1. The rules need to generate a closed set of sentences (no under-generation)
